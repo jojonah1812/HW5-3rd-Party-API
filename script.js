@@ -8,3 +8,13 @@ function displayTime() {
 setInterval(displayTime, 1000);
 
 // timeblocks
+
+
+document.getElementById("saveBtn").addEventListener("click", saveToLocal);
+
+function saveToLocal() {
+
+    localStorage.setItem("key", "value");
+
+    //   document.getElementById("demo").innerHTML = Date();
+}
