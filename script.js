@@ -1,3 +1,11 @@
+//ISSUES
+// 1. no local storage
+// 2. SAVE not working
+// 3. TRASH not working
+// 4. colors not working by time
+
+
+
 // Timer //
 var timeDisplayEl = $('#time-display');
 
@@ -8,8 +16,10 @@ function displayTime() {
     }
 setInterval(displayTime, 1000);
 
-// timeblocks  //
 
+
+
+    //// Local Storage ////
 var text = "textArea"
 
 document.getElementById("saveBtn").addEventListener("click", saveToLocal);
