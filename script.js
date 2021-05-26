@@ -1,4 +1,4 @@
-//////////// Timer  ////////////////////
+// Timer //
 var timeDisplayEl = $('#time-display');
 
 function displayTime() {
@@ -8,33 +8,58 @@ function displayTime() {
     }
 setInterval(displayTime, 1000);
 
-/////// timeblocks  ///////////
+// timeblocks  //
 
 var text = "textArea"
 
 document.getElementById("saveBtn").addEventListener("click", saveToLocal);
 
 function saveToLocal() {
+    //// ERROR  on "textArea"??????????  ???????????
     localStorage.setItem("textArea", text);
     }
 
 
+    // TIME COLORS //
+
+    function timeColors () {
+        //current number hours//
+        var rightNow = moment().hour();
+
+        $(".time-block").each(function() {
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+       
+            if (blockTime < rightNow) {
+                $(this).addClass("past");
+                $(this).removeClass("present");
+                $(this).removeClass("future");
+            }
+            else if (blockTime=== rightNow) {
+                $(this).removeClass("past");
+                $(this).addClass("present");
+                $(this).removeClass("future");
+            }
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
+            }
+        })    
+    }
 
 //GET ITEM FROM LOCAL STORAGE
-$("#hour8am.textArea").val(localStorage.getItem("hour8am"))
-$("#hour9am.textArea").val(localStorage.getItem("hour9am"))
-$("#hour10am.textArea").val(localStorage.getItem("hour10am"))
-$("#hour11am.textArea").val(localStorage.getItem("hour11am"))
-$("#hour12pm.textArea").val(localStorage.getItem("hour12pm"))
-$("#hour1pm.textArea").val(localStorage.getItem("hour1pm"))
-$("#hour2pm.textArea").val(localStorage.getItem("hour2pm"))
-$("#hour3pm.textArea").val(localStorage.getItem("hour3pm"))
-$("#hour4pm.textArea").val(localStorage.getItem("hour4pm"))
-$("#hour5pm.textArea").val(localStorage.getItem("hour5pm"))
+$("#hour8.textArea").val(localStorage.getItem("hour8"))
+$("#hour9.textArea").val(localStorage.getItem("hour9"))
+$("#hour10.textArea").val(localStorage.getItem("hour10"))
+$("#hour11.textArea").val(localStorage.getItem("hour11"))
+$("#hour12.textArea").val(localStorage.getItem("hour12"))
+$("#hour13.textArea").val(localStorage.getItem("hour13"))
+$("#hour14.textArea").val(localStorage.getItem("hour14"))
+$("#hour15.textArea").val(localStorage.getItem("hour15"))
+$("#hour16.textArea").val(localStorage.getItem("hour16"))
+$("#hour17.textArea").val(localStorage.getItem("hour17"))
 
-$("#hour9pm.textArea").val(localStorage.getItem("hour9pm"))
-$("#hour10pm.textArea").val(localStorage.getItem("hour10pm"))
+// $("#hour21.textArea").val(localStorage.getItem("hour21"))
+// $("#hour22.textArea").val(localStorage.getItem("hour22"))
 
-    // Get item from local storage if any
-    // $("#hour6 .description").val(localStorage.getItem("hour6"));
-   
+timeColors();
