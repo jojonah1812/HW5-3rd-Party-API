@@ -1,4 +1,7 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Homework #5 Third-Party APIs: Work Day Scheduler
+
+## Impressions
+I felt that this project was a great way to be introduced to jQuery.  As I worked on it, I could see the progression of topics: utilizing Moments.js, manipulating the DOM, and various other little aspects that made major contributions in the end.
 
 ## Your Task
 
@@ -32,9 +35,12 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+## The following picture demonstrates the application ~~functionality~~ in all of its glory:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+https://github.com/jojonah1812/HW5-3rd-Party-API.git <br>
+https://jojonah1812.github.io/HW5-3rd-Party-API/
+
+![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/screenshot.jpg)
 
 
 ## Grading Requirements
